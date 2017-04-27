@@ -17,6 +17,6 @@ script:
 
 notifications:
   slack:
-    on_failure: change
+    on_failure: always
     on_success: never
     secure: j7Tfk/9JZTFOZT4NxtbsPu+PuNywSpfMCNTlRGAWTaedGPphrPdvANHn8sg9iD1XnBAL2b+scX+MTk9ff9P/eBJ3qMoMq1SngjXDOF3w1WFJvl2gYxbC6wqGzMvGKsR0zHquz7RFunNEy3tTgQVXomk0SCA/A9cwD2k2I/eqrwQ=
