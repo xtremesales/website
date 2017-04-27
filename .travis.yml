@@ -3,14 +3,20 @@
 language: php
 
 php:
-    - "7.0"
+- '7.0'
 
 before_script:
-    - "bash -c 'source ~/.nvm/nvm.sh; nvm install 6'"
-    - "bash -c 'source ~/.nvm/nvm.sh; nvm use 6; npm install'"
+- bash -c 'source ~/.nvm/nvm.sh; nvm install 6'
+- bash -c 'source ~/.nvm/nvm.sh; nvm use 6; npm install'
 
 script:
-    - "bash -c 'source ~/.nvm/nvm.sh; nvm use 6; sh ./_tests/css.sh'"
-    - "bash -c 'source ~/.nvm/nvm.sh; nvm use 6; sh ./_tests/javascript.sh'"
-    - "sh ./_tests/php.sh"
-    - "php ./_tests/translations.php"
+- bash -c 'source ~/.nvm/nvm.sh; nvm use 6; sh ./_tests/css.sh'
+- bash -c 'source ~/.nvm/nvm.sh; nvm use 6; sh ./_tests/javascript.sh'
+- sh ./_tests/php.sh
+- php ./_tests/translations.php
+
+notifications:
+  slack:
+    on_failure: change
+    on_success: never
+    secure: j7Tfk/9JZTFOZT4NxtbsPu+PuNywSpfMCNTlRGAWTaedGPphrPdvANHn8sg9iD1XnBAL2b+scX+MTk9ff9P/eBJ3qMoMq1SngjXDOF3w1WFJvl2gYxbC6wqGzMvGKsR0zHquz7RFunNEy3tTgQVXomk0SCA/A9cwD2k2I/eqrwQ=
